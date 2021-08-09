@@ -1,12 +1,14 @@
-import React from 'react';
+import React ,{ lazy,Suspense } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/Login';
-import Signup from './components/signup';
+const Login = lazy(() => import('./components/Login'))
+const Signup = lazy(() => import('./components/signup'))
+const renderLoader = () => <p>Loading</p>;
 
 function App() {
   return (
     <div className="App">
+      <Suspense fallback={renderLoader()}>
       <Router>
         <Switch>
 
@@ -14,6 +16,7 @@ function App() {
           < Route exact path="/signup" component={Signup} />
         </Switch>
       </Router>
+      </Suspense>
 
 
 
