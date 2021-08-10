@@ -2,8 +2,11 @@ import { Button, Grid, Paper, TextField, Typography, Link, Box } from '@material
 import { useHistory } from 'react-router-dom';
 import React from 'react';
 import { grey } from '@material-ui/core/colors';
+<<<<<<< HEAD
 import { Form, Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
+=======
+>>>>>>> 607863304927b719a9d730736d9e2fcf0d9b9e3e
 
 
 
@@ -22,6 +25,7 @@ const Login = () => {
     const linkstyle = { color: '#0878ea' }
     const linkkstyle = { color: '#0878ea' }
     const fontcol = { color: '#696161', fontWeight: 600 }
+<<<<<<< HEAD
     const initialValues = {
         emailaddress: '',
         password: ''
@@ -40,6 +44,8 @@ const Login = () => {
         emailaddress: Yup.string().email('Please enter valid email').required('Required'),
         password: Yup.string().required('Required')
     })
+=======
+>>>>>>> 607863304927b719a9d730736d9e2fcf0d9b9e3e
 
 
 
@@ -50,12 +56,17 @@ const Login = () => {
 
         <Grid>
             <Paper elevation={10} style={paperStyle}>
+<<<<<<< HEAD
                 <Box border={1} borderColor="gray" padding='50px 20px 20px 20px' width='200' height='45vh' margin='30px  auto ' borderRadius='15px'>
+=======
+                <Box border={1} borderColor="gray" padding='50px 20px 20px 20px' width='200' height='40vh' margin='30px  auto ' borderRadius='15px'>
+>>>>>>> 607863304927b719a9d730736d9e2fcf0d9b9e3e
                     <Grid align='center'>
 
 
                         <h2 style={fontcol}><img src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-abstract-s-letter-circle-vector-logo-design-alphabet-circle-logo-vector-png-image_3611616.jpg" alt="" style={{ width: 35, height: 36, borderRadius: 100 / 3 }} align='center' /> Blog </h2>
                     </Grid>
+<<<<<<< HEAD
                     <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
                         {(props) => (
                             <Form>
@@ -78,6 +89,18 @@ const Login = () => {
                             </Form>
                         )}
                     </Formik>
+=======
+                    <TextField id="outlined-basic" label='Email address' variant="outlined" placeholder='Enter email address' fullWidth style={emailstyle} />
+                    <TextField id="outlined-basic" label='Password' variant="outlined" placeholder='Enter password' type='password' fullWidth style={passstyle} />
+
+                    <Typography align='right' style={forgetstyle}>
+                        <Link href="#" style={linkkstyle}>
+                            Forgot your password?
+                        </Link>
+                    </Typography>
+
+                    <Button type='submit' color='primary' fullWidth variant="contained" style={btnstyle}>Sign In</Button>
+>>>>>>> 607863304927b719a9d730736d9e2fcf0d9b9e3e
 
                     <Typography style={bt}> Don't  have an account?
                         <Link onClick={() => { history.push('/signup') }} href="#" style={linkstyle}>
