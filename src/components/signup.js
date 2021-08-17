@@ -8,15 +8,16 @@ const Signup = () => {
     let history = useHistory();
 
     const paperStyle = { padding: '100px 100px 100px 100px', height: '80vh', width: 380, margin: "100px auto" }
-    const btnstyle = { margin: '8px 0', backgroundColor: '#0878ea' }
+    const btnstyle = { margin: '8px 0', backgroundColor: '#0878ea', textTransform: 'none' }
     const emailstyle = { margin: '10px 0' }
     const passstyle = { margin: '10px 0' }
     const bt = { padding: '0px 0px 0px 0px', color: 'grey' }
     const linkstyle = { color: '#0878ea' }
     const linkStyle = { color: '#0878ea' }
-    const checkStyle = { color: '#0878ea' }
+    const checkStyle = { color: '#0878ea', padding: '10px 0px 0px 10px' }
     const fontColor = { color: 'grey' }
     const fontcol = { color: '#696161', fontWeight: 600 }
+    const sam = { height: '10vh', width: 1000, margin: '-25px auto', padding: '0px 0px 0px 30px' }
     const initialValues = {
         emailaddress: '',
         password: '',
@@ -66,18 +67,21 @@ const Signup = () => {
                                     <FormControlLabel
                                         control={
                                             <Field as={Checkbox} name='termsAndpolicy'
-                                                size="large"
+                                                size="medium"
 
                                                 style={checkStyle}
                                             />
                                         } />
 
-                                    By signing up, you are agreeing to <br></br>the
-                                    <Link href="#" style={linkStyle}>
-                                        {"      "}terms of service
-                                    </Link> & <Link href="#" style={linkStyle}>
-                                        privacy policy .
-                                    </Link>
+
+                                    <Grid style={sam}>
+                                        By signing up, you are agreeing to <br></br>the
+                                        <Link href="#" style={linkStyle}>
+                                            {"      "}terms of service
+                                        </Link> & <Link href="#" style={linkStyle}>
+                                            privacy policy
+                                        </Link>.
+                                    </Grid>
 
                                 </Typography>
 
