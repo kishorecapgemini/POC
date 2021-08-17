@@ -14,13 +14,13 @@ const Login = () => {
 
     const paperStyle = { padding: '100px 100px 100px 100px', height: '80vh', width: 380, margin: "100px auto" }
 
-    const btnstyle = { margin: '8px 0', backgroundColor: '#0878ea' }
+    const btnstyle = { margin: '8px 0', backgroundColor: '#0878ea', textTransform: 'none' }
     const emailstyle = { margin: '10px 0', color: grey }
     const passstyle = { margin: '10px 0', color: grey }
     const bt = { padding: '60px 0px 0px 0px' }
     const forgetstyle = { margin: '5px 0' }
-    const linkstyle = { color: '#0878ea' }
-    const linkkstyle = { color: '#0878ea' }
+    const linkstyle = { color: '#0878ea', padding: '0px 0px 0px 8px' }
+    const linkkstyle = { color: '#0878ea', padding: '0px 15px 0px 0px' }
     const fontcol = { color: '#696161', fontWeight: 600 }
     const initialValues = {
         emailaddress: '',
@@ -38,7 +38,7 @@ const Login = () => {
     }
     const validationSchema = Yup.object().shape({
         emailaddress: Yup.string().email('Please enter valid email').required('Required'),
-        password: Yup.string().required('Required')
+        password: Yup.string().min(8, 'Password minimum lenght should be 8').required('Required')
     })
 
 
