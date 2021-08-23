@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
 const Login = lazy(() => import('./components/Login'))
 const Signup = lazy(() => import('./components/signup'))
 const renderLoader = () => <p>Loading</p>;
@@ -14,6 +15,9 @@ function App() {
 
             < Route exact path="/login" component={Login} />
             < Route exact path="/signup" component={Signup} />
+            <Dashboard>
+              
+            </Dashboard>
           </Switch>
         </Router>
       </Suspense>
