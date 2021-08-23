@@ -39,4 +39,6 @@
 .MuiFormHelperText-root{
   color:red !important;
 }
-
+.MuiAppBar-colorPrimary{
+  background-color: white;
+}
