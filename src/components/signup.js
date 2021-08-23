@@ -12,7 +12,7 @@ const Signup = () => {
     const emailstyle = { margin: '10px 0' }
     const passstyle = { margin: '10px 0' }
     const bt = { padding: '0px 0px 0px 0px', color: 'grey' }
-    const linkstyle = { color: '#0878ea' }
+    const linkstyle = { color: '#0878ea',padding: '0px 0px 0px 8px' }
     const linkStyle = { color: '#0878ea' }
     const checkStyle = { color: '#0878ea', padding: '10px 0px 0px 10px' }
     const fontColor = { color: 'grey' }
@@ -38,8 +38,6 @@ const Signup = () => {
         password: Yup.string().min(8, 'Password minimum lenght should be 8').required('Required'),
         termsAndpolicy: Yup.string().oneOf(['true'], 'Accept terms & policies')
     })
-
-
 
 
     return (
