@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-const Login = lazy(() => import('./components/Login'))
-const Signup = lazy(() => import('./components/signup'))
+const Login = lazy(() => import('./components/Login')) 
+const Signup = lazy(() => import('./components/SignUp'))
+const DashBoard = lazy(()=> import('./components/Dashboard/Dashboard'))
 const renderLoader = () => <p>Loading</p>;
 
 function App() {
@@ -15,9 +15,7 @@ function App() {
 
             < Route exact path="/login" component={Login} />
             < Route exact path="/signup" component={Signup} />
-            <Dashboard>
-              
-            </Dashboard>
+            < Route exact path="/dashboard" component={DashBoard}/>
           </Switch>
         </Router>
       </Suspense>
